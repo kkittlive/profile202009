@@ -1,3 +1,14 @@
+.header-font, h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-style: oblique; }
+
+.body-font, .body {
+  font-family: "Scope One", serif; }
+
+.small, .main th {
+  font-size: 80%; }
+
 .charcoal {
   color: #2D4D58; }
 
@@ -13,7 +24,7 @@
 .white {
   color: #FFFFFF; }
 
-.spacey {
+.spacey, .caption span {
   letter-spacing: 0.1em; }
 
 .spacier {
@@ -21,17 +32,7 @@
 
 .body {
   color: #FFFFFF;
-  font-family: "Open Sans", Sans-Serif;
-  font-weight: lighter;
   background-color: #C17C74; }
-
-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  min-height: 80vh; }
-
-h1, h2 {
-  font-family: "Work Sans", Sans-Serif; }
 
 h1 {
   font-size: 12vw !important;
@@ -40,45 +41,51 @@ h1 {
 h2 {
   font-size: 5vw !important; }
 
-h3 {
-  font-family: "Open Sans", Sans-Serif; }
-
-h4 {
-  font-family: "Libre Baskerville", serif;
-  margin-bottom: 1.2em !important; }
+p {
+  letter-spacing: 0.07em; }
 
 a:hover {
   color: #FFFFFF !important; }
 
 @media screen and (max-width: 600px) {
   section {
-    min-height: 60vh; }
-
-  h1 {
-    font-size: 15vw !important; }
-
-  h2 {
-    font-size: 8vw !important; } }
-.third-font {
-  font-family: "Libre Baskerville", serif; }
-
+    min-height: 60vh; } }
 .mark {
   background-color: #EA7317 !important;
   color: #FFFFFF; }
 
-.under {
-  border-bottom: 0.2em solid #EA7317;
-  border-right: 0.2em solid #EA7317; }
+.under, .caption span {
+  border-bottom: 0.2em solid #EA7317; }
 
 .bigger {
   font-size: 1.2em; }
 
-.caption {
-  justify-content: center;
-  border-top: 0.1em solid #E2E4E4;
-  border-bottom: 0.1em solid #E2E4E4;
-  min-height: 400px;
-  font-size: 1.12rem; }
+.container {
+  display: flex;
+  flex-direction: column; }
+
+section {
+  min-height: 30rem;
+  border-bottom: 0.1em solid #E2E4E4; }
+
+.caption span {
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  font-size: 1.2em;
+  padding-left: 0.4em;
+  padding-right: 0.2em; }
+
+.main table {
+  color: #FFFFFF !important; }
+.main th {
+  font-weight: 300;
+  color: #E2E4E4;
+  min-width: 8em;
+  vertical-align: bottom; }
+.main tr:hover {
+  color: #2D4D58 !important;
+  background-color: #2D4D5810 !important;
+  opacity: 0.8; }
 
 .details {
   background-color: #EA7317; }
@@ -87,10 +94,8 @@ a:hover {
     font-size: 0.9rem;
     margin-bottom: 0.4em; }
 
-.who p, .contact p {
-  color: #E2E4E4;
-  font-size: 0.9rem;
-  margin-bottom: 0.4em; }
+.contact {
+  border-bottom: none; }
 
 .title:nth-of-type(1) {
   --duration: 12s;
@@ -116,7 +121,7 @@ a:hover {
     display: flex; }
   .title:nth-of-type(1) p, .title:nth-of-type(2) p, .title:nth-of-type(3) p {
     color: #2D4D58;
-    font-family: "Libre Baskerville", serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1.8rem;
     animation: textAnimate var(--duration) cubic-bezier(0.74, 0.06, 0.4, 0.92) var(--delay) infinite forwards;
     display: flex;

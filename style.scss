@@ -4,15 +4,31 @@
 ////////                                                               ////////
 ///////////////////////////////////////////////////////////////////////////////
 
-$first-font: 'Work Sans', Sans-Serif;
-$second-font: 'Open Sans', Sans-Serif;
-$third-font: 'Libre Baskerville', serif;
+$first-font: 'Raleway', sans-serif;
+$second-font: 'Scope One', serif;
+
+.header-font {
+  font-family: $first-font;
+  font-weight: 800;
+  font-style: oblique;
+}
+
+.body-font {
+  font-family: $second-font;
+}
+
+.small {
+  font-size: 80%;
+}
 
 $charcoal: #2D4D58;
 $orange: #EA7317;
 $rose: #C17C74;
 $dust: #E2E4E4;
 $white: #FFFFFF;
+
+
+$charcoal10: #2D4D5810;
 
 .charcoal {
   color: $charcoal;
@@ -40,29 +56,19 @@ $white: #FFFFFF;
 
 ///////////////////////////////////////////////////////////////////////////////
 ////////                                                               ////////
-////////                        TITLES ANIMATION                       ////////
+////////                            GENERAL                            ////////
 ////////                                                               ////////
 ///////////////////////////////////////////////////////////////////////////////
 
 .body {
+  @extend .body-font;
+
   color: $white;
-  font-family: $second-font;
-  font-weight: lighter;
-  // color: $charcoal;
   background-color: $rose;
 }
 
-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  min-height: 80vh;
-}
-
-h1, h2 {
-  font-family: $first-font;
-}
-
 h1 {
+  @extend .header-font;
   font-size: 12vw !important;
   line-height: 1 !important;
 }
@@ -71,18 +77,8 @@ h2 {
   font-size: 5vw !important;
 }
 
-h3 {
-  font-family: $second-font;
-}
-
-h4 {
-  font-family: $third-font;
-  margin-bottom: 1.2em !important;
-  // color: $white;
-  // background-color: $orange;
-}
-
 p {
+  letter-spacing: 0.07em;
 }
 
 a:hover {
@@ -95,17 +91,19 @@ a:hover {
   }
 
   h1 {
-    font-size: 15vw !important;
+    // font-size: 15vw !important;
   }
   h2 {
-    font-size: 8vw !important;
+    // font-size: 8vw !important;
   }
 }
 
 
-.third-font {
-  font-family: $third-font;
-}
+///////////////////////////////////////////////////////////////////////////////
+////////                                                               ////////
+////////                            ACCENTS                            ////////
+////////                                                               ////////
+///////////////////////////////////////////////////////////////////////////////
 
 .mark {
   background-color: $orange !important;
@@ -117,23 +115,66 @@ a:hover {
   // padding-right: 0.25em;
   // margin-right: 0.1em;
   border-bottom: 0.2em solid $orange;
-  border-right: 0.2em solid $orange;
+  // border-right: 0.2em solid $orange;
 }
 
 .bigger {
   font-size: 1.2em;
 }
 
-.caption {
-  justify-content: center;
-  border-top: 0.1em solid $dust;
-  border-bottom: 0.1em solid $dust;
-  min-height: 400px;
-  font-size: 1.12rem;
 
+///////////////////////////////////////////////////////////////////////////////
+////////                                                               ////////
+////////                            CONTENT                            ////////
+////////                                                               ////////
+///////////////////////////////////////////////////////////////////////////////
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  min-height: 30rem;
+  border-bottom: 0.1em solid $dust;
+}
+
+.caption {
   p {
-    // border-top: 0.1em solid $white;
-    // border-bottom: 0.1em solid $white;
+  }
+
+  span {
+    @extend .spacey, .under;
+    font-family: $first-font;
+    font-style: italic;
+    font-size: 1.2em;
+    padding-left: 0.4em;
+    padding-right: 0.2em;
+  }
+}
+
+.main {
+  table {
+    color: $white !important;
+  }
+
+  th {
+    @extend .small;
+
+    font-weight: 300;
+    color: $dust;
+    min-width: 8em;
+    vertical-align: bottom;
+  }
+
+  tr:hover {
+    color: $charcoal !important;
+    background-color: $charcoal10 !important;
+    opacity: 0.8;
+
+    // th {
+    //   color: $white !important;
+    // }
   }
 }
 
@@ -147,11 +188,13 @@ a:hover {
   }
 }
 
-.who p, ,.contact p {
-  color: $dust;
-  font-size: 0.9rem;
-  margin-bottom: 0.4em;
+.contact {
+  border-bottom: none;
+
+  p {
+  }
 }
+
 
 ///////////////////////////////////////////////////////////////////////////////
 ////////                                                               ////////
@@ -196,7 +239,7 @@ a:hover {
 
   p {
     color: $charcoal;
-    font-family: $third-font;
+    font-family: $first-font;
     font-size: 1.8rem;
     // justify-content: center;
     animation: textAnimate var(--duration) cubic-bezier(.74, .06, .4, .92) var(--delay) infinite forwards;
