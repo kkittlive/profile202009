@@ -9,7 +9,7 @@ $second-font: 'Scope One', serif;
 
 .header-font {
   font-family: $first-font;
-  font-weight: 800;
+  // font-weight: 800;
   font-style: oblique;
 }
 
@@ -72,6 +72,10 @@ h1 {
   @extend .header-font;
   font-size: 10rem !important;
   line-height: 1 !important;
+
+  span {
+    font-weight: 800;
+  }
 }
 
 h2 {
@@ -169,6 +173,25 @@ section {
     color: $white !important;
   }
 
+  tr {
+    height: 4em;
+  }
+
+  tr:hover {
+    color: $charcoal;
+    background-color: $charcoal20;
+    opacity: 0.8;
+  }
+
+  // tr:hover th {
+  //   color: $white !important;
+  //   opacity: 1 !important;
+  // }
+
+  tr.breaker:hover {
+    opacity: 0 !important;
+  }
+
   th {
     @extend .small;
 
@@ -178,14 +201,8 @@ section {
     vertical-align: bottom;
   }
 
-  tr:hover {
-    color: $charcoal;
-    background-color: $charcoal20;
-    opacity: 0.8;
-  }
-
-  tr.breaker:hover {
-    opacity: 0 !important;
+  td {
+    vertical-align: bottom;
   }
 }
 

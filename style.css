@@ -1,6 +1,5 @@
 .header-font, h1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 800;
   font-style: oblique; }
 
 .body-font, .body {
@@ -37,6 +36,8 @@
 h1 {
   font-size: 10rem !important;
   line-height: 1 !important; }
+  h1 span {
+    font-weight: 800; }
 
 h2 {
   font-size: 4rem !important; }
@@ -90,17 +91,21 @@ section {
 
 .main table {
   color: #FFFFFF !important; }
-.main th {
-  font-weight: 300;
-  color: #E2E4E4;
-  min-width: 9em;
-  vertical-align: bottom; }
+.main tr {
+  height: 4em; }
 .main tr:hover {
   color: #2D4D58;
   background-color: #2D4D5820;
   opacity: 0.8; }
 .main tr.breaker:hover {
   opacity: 0 !important; }
+.main th {
+  font-weight: 300;
+  color: #E2E4E4;
+  min-width: 9em;
+  vertical-align: bottom; }
+.main td {
+  vertical-align: bottom; }
 
 .details {
   background-color: #EA7317; }
