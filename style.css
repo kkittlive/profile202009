@@ -65,7 +65,7 @@ a:hover {
   flex-direction: column; }
 
 section {
-  min-height: 30rem;
+  min-height: 32rem;
   border-bottom: 0.1em solid #E2E4E4; }
 
 .caption span {
