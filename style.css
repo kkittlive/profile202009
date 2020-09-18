@@ -35,21 +35,27 @@
   background-color: #C17C74; }
 
 h1 {
-  font-size: 12vw !important;
+  font-size: 10rem !important;
   line-height: 1 !important; }
 
 h2 {
-  font-size: 5vw !important; }
+  font-size: 4rem !important; }
 
-p {
+p, tr {
   letter-spacing: 0.07em; }
 
 a:hover {
   color: #FFFFFF !important; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   section {
     min-height: 60vh; }
+
+  h1 {
+    font-size: 12vw !important; }
+
+  h2 {
+    font-size: 5vw !important; }
 
   p, td {
     font-size: 0.9em; } }
@@ -78,19 +84,16 @@ section {
 .caption span {
   font-family: "Raleway", sans-serif;
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1.05em;
   padding-left: 0.4em;
   padding-right: 0.2em; }
-@media screen and (max-width: 600px) {
-  .caption span {
-    font-size: 1.05em; } }
 
 .main table {
   color: #FFFFFF !important; }
 .main th {
   font-weight: 300;
   color: #E2E4E4;
-  min-width: 8em;
+  min-width: 9em;
   vertical-align: bottom; }
 .main tr:hover {
   color: #2D4D58;

@@ -70,15 +70,15 @@ $charcoal20: #2D4D5820;
 
 h1 {
   @extend .header-font;
-  font-size: 12vw !important;
+  font-size: 10rem !important;
   line-height: 1 !important;
 }
 
 h2 {
-  font-size: 5vw !important;
+  font-size: 4rem !important;
 }
 
-p {
+p, tr {
   letter-spacing: 0.07em;
 }
 
@@ -86,16 +86,16 @@ a:hover {
   color: $white !important;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   section {
     min-height: 60vh;
   }
 
   h1 {
-    // font-size: 15vw !important;
+    font-size: 12vw !important;
   }
   h2 {
-    // font-size: 8vw !important;
+    font-size: 5vw !important;
   }
 
   p, td {
@@ -158,15 +158,9 @@ section {
     @extend .spacey, .under, .mark-charcoal;
     font-family: $first-font;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.05em;
     padding-left: 0.4em;
     padding-right: 0.2em;
-  }
-
-  @media screen and (max-width: 600px) {
-    span {
-      font-size: 1.05em;
-    }
   }
 }
 
@@ -180,7 +174,7 @@ section {
 
     font-weight: 300;
     color: $dust;
-    min-width: 8em;
+    min-width: 9em;
     vertical-align: bottom;
   }
 
