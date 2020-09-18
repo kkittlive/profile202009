@@ -96,6 +96,10 @@ a:hover {
   h2 {
     // font-size: 8vw !important;
   }
+
+  p, td {
+    font-size: 0.9em;
+  }
 }
 
 
@@ -131,7 +135,7 @@ a:hover {
 
 .container {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
 }
 
 section {
@@ -151,6 +155,12 @@ section {
     padding-left: 0.4em;
     padding-right: 0.2em;
   }
+
+  @media screen and (max-width: 600px) {
+    span {
+      font-size: 1.05em;
+    }
+  }
 }
 
 .main {
@@ -165,6 +175,11 @@ section {
     color: $dust;
     min-width: 8em;
     vertical-align: bottom;
+  }
+
+  tr.breaker {
+    background-color: $charcoal10 !important;
+    opacity: 0.8;
   }
 
   tr:hover {
