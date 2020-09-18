@@ -29,6 +29,7 @@ $white: #FFFFFF;
 
 
 $charcoal10: #2D4D5810;
+$charcoal20: #2D4D5820;
 
 .charcoal {
   color: $charcoal;
@@ -109,9 +110,15 @@ a:hover {
 ////////                                                               ////////
 ///////////////////////////////////////////////////////////////////////////////
 
-.mark {
+.mark-orange {
   background-color: $orange !important;
   color: $white;
+}
+
+.mark-charcoal {
+  background-color: $charcoal20 !important;
+  color: $white;
+  opacity: 0.8;
 }
 
 .under {
@@ -148,7 +155,7 @@ section {
   }
 
   span {
-    @extend .spacey, .under;
+    @extend .spacey, .under, .mark-charcoal;
     font-family: $first-font;
     font-style: italic;
     font-size: 1.2em;
@@ -177,19 +184,14 @@ section {
     vertical-align: bottom;
   }
 
-  tr.breaker {
-    background-color: $charcoal10 !important;
+  tr:hover {
+    color: $charcoal;
+    background-color: $charcoal20;
     opacity: 0.8;
   }
 
-  tr:hover {
-    color: $charcoal !important;
-    background-color: $charcoal10 !important;
-    opacity: 0.8;
-
-    // th {
-    //   color: $white !important;
-    // }
+  tr.breaker:hover {
+    opacity: 0 !important;
   }
 }
 

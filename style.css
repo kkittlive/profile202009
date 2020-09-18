@@ -53,9 +53,14 @@ a:hover {
 
   p, td {
     font-size: 0.9em; } }
-.mark {
+.mark-orange {
   background-color: #EA7317 !important;
   color: #FFFFFF; }
+
+.mark-charcoal, .caption span {
+  background-color: #2D4D5820 !important;
+  color: #FFFFFF;
+  opacity: 0.8; }
 
 .under, .caption span {
   border-bottom: 0.2em solid #EA7317; }
@@ -87,13 +92,12 @@ section {
   color: #E2E4E4;
   min-width: 8em;
   vertical-align: bottom; }
-.main tr.breaker {
-  background-color: #2D4D5810 !important;
-  opacity: 0.8; }
 .main tr:hover {
-  color: #2D4D58 !important;
-  background-color: #2D4D5810 !important;
+  color: #2D4D58;
+  background-color: #2D4D5820;
   opacity: 0.8; }
+.main tr.breaker:hover {
+  opacity: 0 !important; }
 
 .details {
   background-color: #EA7317; }
