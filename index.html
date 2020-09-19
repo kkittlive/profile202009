@@ -23,7 +23,12 @@
     <div>
       <p class="py-5 small">WELCOME!</p>
 
-      <h1 class="pt-5 mb-0">I'm <span class="charcoal">Janette</span>,</h1>
+      <h1 class="pt-5 mb-0">I'm<!-- &nbsp; -->
+        <span class="title">
+          <span class="bg"></span>
+          <span class="content charcoal">Janette</span>
+        </span>
+      ,</h1>
 
       <p class="pl-4 font-italic font-weight-light spacey dust">
         (some call me <span class="font-weight-bold charcoal spacey">Kit</span>)<br>
@@ -49,11 +54,11 @@
       <tbody>
         <tr>
           <th scope="row">YOU ARE A:</th>
-          <td>artist, entrepreneur, consultant, professional, startup, non-profit, agency, small business, corporation</td>
+          <td><span>artist</span>, <span>entrepreneur</span>, <span>consultant</span>, <span>professional</span>, <span>startup</span>, <span>non</span>-profit, <span>agency</span>, <span>small business</span>, <span>corporation</span></td>
         </tr>
         <tr>
           <th scope="row">I'M A:</th>
-          <td>full stack developer, web designer, digital strategist</td>
+          <td><span>full stack developer</span>, <span>web designer</span>, <span>digital strategist</span></td>
         </tr>
       </tbody>
     </table>
@@ -65,15 +70,15 @@
       <tbody>
         <tr>
           <th scope="row">FRONT:</th>
-          <td>Landing pages + website rebuilds, storytelling through UI/UX, mobile-responsive design, Shopify Partner + eCommerce specialist, Wordpress + Wix + Squarespace</td>
+          <td><span>Landing pages</span> + <span>website rebuilds</span>, <span>storytelling through UI/UX</span>, <span>mobile-responsive design</span>, <span>Shopify Partner</span> + <span>eCommerce specialist</span>, <span>Wordpress</span> + <span>Wix</span> + <span>Squarespace</span></td>
         </tr>
         <tr>
           <th scope="row">BACK:</th>
-          <td>Business systems analyses, process design, technology integration, automation, data + knowledge management, end-user training</td>
+          <td><span>Business systems analyses</span>, <span>process design</span>, <span>technology integration</span>, <span>automation</span>, <span>data + knowledge management</span>, <span>end-user training</span></td>
         </tr>
         <tr>
           <th scope="row">FULL STACK:</th>
-          <td>HTML, CSS + Bootstrap, Javascript + jQuery, REST APIs, Ruby on Rails, MVC architecture, SQL + PostgreSQL</td>
+          <td><span>HTML</span>, <span>CSS</span> + <span>Bootstrap</span>, <span>Javascript</span> + <span>jQuery</span>, <span>REST APIs</span>, <span>Ruby on Rails</span>, <span>MVC architecture</span>, <span>SQL</span> + <span>PostgreSQL</span></td>
         </tr>
       </tbody>
     </table>
@@ -130,7 +135,10 @@
   <div class="row w-100 justify-content-between">
     <div class="col order-12 order-md-1 mt-3 mt-md-auto">
       <p>Thanks for coming!<br>
-        Send me a message -<br>
+        <span class="title">
+          <span class="bg"></span>
+          <span>Send me a message</span>
+        </span><br>
         it's 5 o'clock somewhere,<br>
         maybe I'll come for one (and stay 'till 2)</p>
     </div>
@@ -155,6 +163,25 @@
       </div>
     </div>
   </section>
+
+
+  <script>
+    const tableRows = document.querySelectorAll('.main tr');
+
+    tableRows.forEach(row => {
+      row.addEventListener('mouseenter', function () {
+        var allSpans = this.querySelectorAll('span');
+
+        allSpans.forEach(span => {
+          span.classList.remove('me');
+        })
+
+        if (allSpans.length > 0) {
+          allSpans[Math.floor((Math.random() * allSpans.length))].classList.add('me');
+        }
+      })
+    })
+  </script>
 
 </body>
 </html>

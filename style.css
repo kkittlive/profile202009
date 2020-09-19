@@ -65,7 +65,7 @@ a:hover {
   color: #FFFFFF; }
 
 .mark-charcoal, .caption span {
-  background-color: #2D4D5820 !important;
+  background-color: #2D4D5830 !important;
   color: #FFFFFF;
   opacity: 0.8; }
 
@@ -74,6 +74,9 @@ a:hover {
 
 .bigger {
   font-size: 1.2em; }
+
+.caption span, .main tr:hover .me {
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2); }
 
 .container {
   display: flex; }
@@ -95,7 +98,7 @@ section {
   height: 4em; }
 .main tr:hover {
   color: #2D4D58;
-  background-color: #2D4D5820;
+  background-color: #2D4D5830;
   opacity: 0.8; }
 .main th {
   font-weight: 300;
@@ -114,6 +117,8 @@ section {
 
 .contact {
   border-bottom: none; }
+  .contact span.title span {
+    z-index: 10; }
   .contact input:focus, .contact textarea:focus {
     border: none;
     box-shadow: none; }
@@ -124,57 +129,67 @@ section {
     background-color: #2D4D58;
     color: #FFFFFF; }
 
-.title:nth-of-type(1) {
-  --duration: 12s;
-  --delay: 6s; }
-
-.title:nth-of-type(2) {
-  --duration: 18s;
-  --delay: 1s; }
-
-.title:nth-of-type(3) {
-  --duration: 14s;
-  --delay: 8s; }
-
-.title:nth-of-type(1), .title:nth-of-type(2), .title:nth-of-type(3) {
-  height: 50px; }
-  .title:nth-of-type(1) .bg, .title:nth-of-type(2) .bg, .title:nth-of-type(3) .bg {
+.title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 90%; }
+  .title .bg {
     width: 0%;
     height: inherit;
-    background: #2D4D58;
-    opacity: 0.8;
+    background: #EA7317;
     position: absolute;
-    animation: bgAnimate var(--duration) cubic-bezier(0.74, 0.06, 0.4, 0.92) var(--delay) infinite forwards;
+    animation: mainBlock 8s cubic-bezier(0.74, 0.06, 0.4, 0.92) infinite forwards;
     display: flex; }
-  .title:nth-of-type(1) p, .title:nth-of-type(2) p, .title:nth-of-type(3) p {
-    color: #2D4D58;
-    font-family: "Raleway", sans-serif;
-    font-size: 1.8rem;
-    animation: textAnimate var(--duration) cubic-bezier(0.74, 0.06, 0.4, 0.92) var(--delay) infinite forwards;
+  .title .content {
+    -webkit-animation: mainFadeIn 8s infinite forwards;
+    -o-animation: mainFadeIn 8s infinite forwards;
+    animation: mainFadeIn 8s infinite forwards;
+    opacity: 0;
     display: flex;
     align-items: baseline;
     position: relative; }
 
-@keyframes bgAnimate {
+@keyframes mainBlock {
   0% {
     width: 0%;
     left: 0; }
-  20% {
+  15% {
     width: 100%;
     left: 0; }
-  40% {
+  30% {
     width: 0;
     left: 100%; } }
-@keyframes textAnimate {
+@keyframes mainFadeIn {
   0% {
-    color: #2D4D58;
-    text-decoration: none; }
-  20% {
-    color: #FFFFFF;
-    opacity: 0.85;
-    text-decoration: underline; }
-  40% {
-    color: #2D4D58;
-    text-decoration: none; } }
+    opacity: 0; }
+  10% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  80% {
+    opacity: 1; } }
+.main span {
+  display: inline-block;
+  position: relative;
+  z-index: 0; }
+  .main span::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 100%;
+    height: 0px;
+    background-color: #EA7317;
+    transition: all 0.7s; }
+
+.main tr:hover .me {
+  color: #FFFFFF;
+  opacity: 1; }
+  .main tr:hover .me::after {
+    height: 116%;
+    width: 106%; }
 
 /*# sourceMappingURL=style.css.map */
