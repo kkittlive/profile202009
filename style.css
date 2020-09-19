@@ -53,10 +53,10 @@ a:hover {
     min-height: 60vh; }
 
   h1 {
-    font-size: 12vw !important; }
+    font-size: 15vw !important; }
 
   h2 {
-    font-size: 5vw !important; }
+    font-size: 7vw !important; }
 
   p, td {
     font-size: 0.9em; } }
@@ -97,8 +97,6 @@ section {
   color: #2D4D58;
   background-color: #2D4D5820;
   opacity: 0.8; }
-.main tr.breaker:hover {
-  opacity: 0 !important; }
 .main th {
   font-weight: 300;
   color: #E2E4E4;

@@ -9,7 +9,6 @@ $second-font: 'Scope One', serif;
 
 .header-font {
   font-family: $first-font;
-  // font-weight: 800;
   font-style: oblique;
 }
 
@@ -96,10 +95,10 @@ a:hover {
   }
 
   h1 {
-    font-size: 12vw !important;
+    font-size: 15vw !important;
   }
   h2 {
-    font-size: 5vw !important;
+    font-size: 7vw !important;
   }
 
   p, td {
@@ -187,10 +186,6 @@ section {
   //   color: $white !important;
   //   opacity: 1 !important;
   // }
-
-  tr.breaker:hover {
-    opacity: 0 !important;
-  }
 
   th {
     @extend .small;
