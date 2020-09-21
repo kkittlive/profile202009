@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Janette (Kit) - digital solutions architect. Full stack web app developer, web designer, digital strategist.">
   <link rel="icon" type="image/ico" href="favicon.ico">
   <title>Janette / Kit</title>
 
@@ -60,6 +61,10 @@
           <th scope="row">I'M A:</th>
           <td><span>full stack developer</span>, <span>web designer</span>, <span>digital strategist</span></td>
         </tr>
+        <tr>
+          <th scope="row">TOGETHER, WE:</th>
+          <td>build impactful <span>mobile-responsive websites</span>, develop <span>web apps</span>, <span>digital strategist</span></td>
+        </tr>
       </tbody>
     </table>
   </section>
@@ -85,65 +90,19 @@
   </section>
 
 
-<!-- <section class="who container py-3">
-  <div class="row">
-    <div class="col-12 col-md-4 px-4 py-5 p-sm-5">
-      <h3>WHO ARE YOU?</h3>
-      <hr>
-
-      <p>artist</p>
-      <p>entrepreneur</p>
-      <p>consultant</p>
-      <p>professional</p>
-      <p>startup</p>
-      <p>agency</p>
-      <p>non-profit</p>
-      <p>small business</p>
-      <p>corporation</p>
-    </div>
-
-    <div class="col-12 col-md-8 px-4 py-5 p-sm-5">
-      <h3 class="pl-0 pl-sm-4">I'M A:</h3>
-      <hr class="ml-0 ml-sm-4">
-
-      <div class="title">
-        <span class="bg"></span>
-        <a href="#full">
-          <p class="my-1 px-0 px-sm-4">Full stack developer</p>
-        </a>
-      </div>
-
-      <div class="title">
-        <span class="bg"></span>
-        <a href="#front">
-          <p class="my-1 px-0 px-sm-4">Web designer</p>
-        </a>
-      </div>
-
-      <div class="title">
-        <span class="bg"></span>
-        <a href="#back">
-          <p class="my-1 px-0 px-sm-4">Digital strategist</p>
-        </a>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-<section class="contact container py-3">
-  <div class="row w-100 justify-content-between">
-    <div class="col order-12 order-md-1 mt-3 mt-md-auto">
-      <p>Thanks for coming!<br>
-        <span class="title">
-          <span class="bg"></span>
-          <span>Send me a message</span>
-        </span><br>
-        it's 5 o'clock somewhere,<br>
+  <section class="contact container py-3">
+    <div class="row w-100 justify-content-between">
+      <div class="col order-12 order-md-1 mt-3 mt-md-auto">
+        <p>Thanks for coming!<br>
+          <span class="title">
+            <span class="bg"></span>
+            <span>Send me a message</span>
+          </span><br>
+          it's 5 o'clock somewhere,<br>
         maybe I'll come for one (and stay 'till 2)</p>
-    </div>
+      </div>
 
-    <div class="col-auto order-1 order-md-12 mt-auto mb-0 mb-md-3" style="margin-right: -32px;">
+      <div class="col-auto order-1 order-md-12 mt-auto mb-0 mb-md-3" style="margin-right: -32px;">
         <form target="_blank" action="https://formsubmit.co/1c1de2d4fe0eaf409a4de1f294a33a6d" method="POST">
           <div class="form-group">
             <div class="form-row">
@@ -156,7 +115,7 @@
             </div>
           </div>
           <div class="form-group">
-            <textarea placeholder="Your message" class="form-control" name="message" rows="3" required></textarea>
+            <textarea placeholder="&quot;Wait, so what do you?&quot; ... &quot;I have an idea...&quot; ... &quot;Please fix this.&quot;" class="form-control" name="message" rows="3" required></textarea>
           </div>
           <button type="submit" class="btn btn-small btn-light">Send message</button>
         </form>
@@ -181,6 +140,19 @@
         }
       })
     })
+
+    var mouseEvent = new MouseEvent('mouseover', {
+      'view': window,
+      'bubbles': true,
+      'cancelable': true
+    });
+    function autoMouseEvent () {
+      console.log('autoMouseEvent happining now, on:');
+      var autoRow = tableRows[Math.floor((Math.random() * tableRows.length))];
+      console.log(autoRow);
+      autoRow.dispatchEvent(mouseEvent);
+    }
+    setInterval(autoMouseEvent, 3000);
   </script>
 
 </body>

@@ -53,10 +53,10 @@ a:hover {
     min-height: 60vh; }
 
   h1 {
-    font-size: 15vw !important; }
+    font-size: 12vw !important; }
 
   h2 {
-    font-size: 7vw !important; }
+    font-size: 5.5vw !important; }
 
   p, td {
     font-size: 0.9em; } }
@@ -119,12 +119,15 @@ section {
   border-bottom: none; }
   .contact span.title span {
     z-index: 10; }
+  .contact input, .contact textarea {
+    border-radius: .16rem; }
   .contact input:focus, .contact textarea:focus {
     border: none;
     box-shadow: none; }
   .contact button {
     color: #2D4D58;
-    border: none; }
+    border: none;
+    border-radius: .16rem; }
   .contact button:hover {
     background-color: #2D4D58;
     color: #FFFFFF; }
@@ -139,12 +142,15 @@ section {
     height: inherit;
     background: #EA7317;
     position: absolute;
+    margin-left: -0.15em;
     animation: mainBlock 8s cubic-bezier(0.74, 0.06, 0.4, 0.92) infinite forwards;
+    animation-delay: 1s;
     display: flex; }
   .title .content {
     -webkit-animation: mainFadeIn 8s infinite forwards;
     -o-animation: mainFadeIn 8s infinite forwards;
     animation: mainFadeIn 8s infinite forwards;
+    animation-delay: 1s;
     opacity: 0;
     display: flex;
     align-items: baseline;
@@ -155,11 +161,14 @@ section {
     width: 0%;
     left: 0; }
   15% {
-    width: 100%;
+    width: 110%;
     left: 0; }
-  30% {
+  25% {
+    width: 110%;
+    left: 0; }
+  40% {
     width: 0;
-    left: 100%; } }
+    left: 105%; } }
 @keyframes mainFadeIn {
   0% {
     opacity: 0; }
