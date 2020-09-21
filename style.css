@@ -23,7 +23,7 @@
 .white {
   color: #FFFFFF; }
 
-.spacey, .caption span {
+.spacey, .caption span, .contact span {
   letter-spacing: 0.1em; }
 
 .spacier {
@@ -64,18 +64,18 @@ a:hover {
   background-color: #EA7317 !important;
   color: #FFFFFF; }
 
-.mark-charcoal, .caption span {
+.mark-charcoal, .caption span, .contact span {
   background-color: #2D4D5830 !important;
   color: #FFFFFF;
   opacity: 0.8; }
 
-.under, .caption span {
+.under, .caption span, .contact span {
   border-bottom: 0.2em solid #EA7317; }
 
 .bigger {
   font-size: 1.2em; }
 
-.caption span, .main tr:hover .me {
+.caption span, .contact span, .main tr:hover .me {
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2); }
 
 .container {
@@ -85,7 +85,7 @@ section {
   min-height: 32rem;
   border-bottom: 0.1em solid #E2E4E4; }
 
-.caption span {
+.caption span, .contact span {
   font-family: "Raleway", sans-serif;
   font-style: italic;
   font-size: 1.05em;
@@ -117,20 +117,29 @@ section {
 
 .contact {
   border-bottom: none; }
-  .contact span.title span {
-    z-index: 10; }
+  .contact span {
+    margin-left: -6px; }
+  .contact ::placeholder {
+    font-style: oblique; }
   .contact input, .contact textarea {
-    border-radius: .16rem; }
+    border-radius: .16rem !important;
+    opacity: 0.9; }
+    .contact input:focus, .contact textarea:focus {
+      color: #2D4D58;
+      font-style: oblique; }
   .contact input:focus, .contact textarea:focus {
     border: none;
     box-shadow: none; }
   .contact button {
-    color: #2D4D58;
-    border: none;
-    border-radius: .16rem; }
-  .contact button:hover {
+    color: #E2E4E4;
     background-color: #2D4D58;
-    color: #FFFFFF; }
+    border: none;
+    border-radius: .16rem !important;
+    opacity: 0.95; }
+  .contact button:hover {
+    background-color: #E2E4E4;
+    color: #2D4D58;
+    opacity: 0.8; }
 
 .title {
   position: relative;

@@ -156,7 +156,7 @@ section {
   border-bottom: 0.1em solid $dust;
 }
 
-.caption span {
+.caption span, .contact span {
   @extend .spacey, .under, .mark-charcoal, %text-shadow;;
   font-family: $first-font;
   font-style: italic;
@@ -225,12 +225,22 @@ section {
     // margin-bottom: -84px;
   }
 
-  span.title span {
-    z-index: 10;
+  span {
+    margin-left: -6px;
+  }
+
+  ::placeholder {
+    font-style: oblique;
   }
 
   input, textarea {
-    border-radius: .16rem;
+    border-radius: .16rem !important;
+    opacity: 0.9;
+
+    &:focus {
+      color: $charcoal;
+      font-style: oblique;
+    }
   }
   input:focus, textarea:focus {
     border: none;
@@ -238,14 +248,17 @@ section {
   }
 
   button {
-    color: $charcoal;
+    color: $dust;
+    background-color: $charcoal;
     border: none;
-    border-radius: .16rem;
+    border-radius: .16rem !important;
+    opacity: 0.95;
   }
 
   button:hover {
-    background-color: $charcoal;
-    color: $white;
+    background-color: $dust;
+    color: $charcoal;
+    opacity: 0.8;
   }
 }
 
