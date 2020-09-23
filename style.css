@@ -124,7 +124,7 @@ section {
 .contact ::placeholder {
   font-style: oblique; }
 .contact input, .contact textarea {
-  font-size: 0.9rem;
+  font-size: 0.9rem !important;
   border-radius: .16rem !important;
   opacity: 0.9; }
   .contact input:focus, .contact textarea:focus {
