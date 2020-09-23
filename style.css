@@ -45,8 +45,12 @@ h2 {
 p, tr {
   letter-spacing: 0.07em; }
 
+a {
+  color: #FFFFFF; }
+
 a:hover {
-  color: #FFFFFF !important; }
+  color: #2D4D58 !important;
+  text-decoration: none; }
 
 @media screen and (max-width: 992px) {
   section {
@@ -69,7 +73,7 @@ a:hover {
   color: #FFFFFF;
   opacity: 0.8; }
 
-.under, .caption span, .contact span {
+.under, a, .caption span, .contact span {
   border-bottom: 0.2em solid #EA7317; }
 
 .bigger {
@@ -115,31 +119,32 @@ section {
     font-size: 0.9rem;
     margin-bottom: 0.4em; }
 
-.contact {
-  border-bottom: none; }
-  .contact span {
-    margin-left: -6px; }
-  .contact ::placeholder {
-    font-style: oblique; }
-  .contact input, .contact textarea {
-    border-radius: .16rem !important;
-    opacity: 0.9; }
-    .contact input:focus, .contact textarea:focus {
-      color: #2D4D58;
-      font-style: oblique; }
+.contact span {
+  margin-left: -6px; }
+.contact ::placeholder {
+  font-style: oblique; }
+.contact input, .contact textarea {
+  border-radius: .16rem !important;
+  opacity: 0.9; }
   .contact input:focus, .contact textarea:focus {
-    border: none;
-    box-shadow: none; }
-  .contact button {
-    color: #E2E4E4;
-    background-color: #2D4D58;
-    border: none;
-    border-radius: .16rem !important;
-    opacity: 0.95; }
-  .contact button:hover {
-    background-color: #E2E4E4;
     color: #2D4D58;
-    opacity: 0.8; }
+    font-style: oblique; }
+.contact input:focus, .contact textarea:focus {
+  border: none;
+  box-shadow: none; }
+.contact button {
+  color: #E2E4E4;
+  background-color: #2D4D58;
+  border: none;
+  border-radius: .16rem !important;
+  opacity: 0.95; }
+.contact button:hover {
+  background-color: #E2E4E4;
+  color: #2D4D58;
+  opacity: 0.8; }
+
+footer {
+  border-top: 0.1em solid #E2E4E4; }
 
 .title {
   position: relative;

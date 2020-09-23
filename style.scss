@@ -86,8 +86,15 @@ p, tr {
   letter-spacing: 0.07em;
 }
 
+a {
+  @extend .under;
+  color: $white;
+}
+
 a:hover {
-  color: $white !important;
+  // color: $white !important;
+  color: $charcoal !important;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -219,7 +226,7 @@ section {
 }
 
 .contact {
-  border-bottom: none;
+  // border-bottom: none;
 
   p {
     // margin-bottom: -84px;
@@ -260,6 +267,10 @@ section {
     color: $charcoal;
     opacity: 0.8;
   }
+}
+
+footer {
+  border-top: 0.1em solid $dust;
 }
 
 
