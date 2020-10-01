@@ -89,12 +89,13 @@ p, tr {
 a {
   @extend .under;
   color: $white;
+  transition: color 1s ease;
 }
 
 a:hover {
-  // color: $white !important;
   color: $charcoal !important;
   text-decoration: none;
+  transition: color 1s ease;
 }
 
 @media screen and (max-width: 992px) {
@@ -163,12 +164,12 @@ section {
   border-bottom: 0.1em solid $dust;
 }
 
-.caption span, .contact span {
-  @extend .spacey, .under, .mark-charcoal, %text-shadow;;
+.caption span { //, .contact span
+  @extend .spacey, .under, %text-shadow; //, .mark-charcoal
   font-family: $first-font;
   font-style: italic;
-  font-size: 1.05em;
-  padding-left: 0.4em;
+  font-size: 1.1em;
+  padding-left: 0.2em;
   padding-right: 0.2em;
 }
 
@@ -188,18 +189,17 @@ section {
 
   tr {
     height: 4em;
+    background-color: none;
+    transition: background-color 1s ease;
+
   }
 
   tr:hover {
     color: $charcoal;
     background-color: $charcoal30;
     opacity: 0.8;
+    transition: background-color 1s ease;
   }
-
-  // tr:hover th {
-  //   color: $white !important;
-  //   opacity: 1 !important;
-  // }
 
   th {
     @extend .small;
@@ -233,11 +233,15 @@ section {
   }
 
   span {
-    margin-left: -6px;
+    // margin-left: -4px;
   }
 
   ::placeholder {
     font-style: oblique;
+  }
+
+  a {
+    border-bottom: none !important;
   }
 
   input, textarea {
@@ -248,11 +252,9 @@ section {
     &:focus {
       color: $charcoal;
       font-style: oblique;
+      border: none;
+      box-shadow: none;
     }
-  }
-  input:focus, textarea:focus {
-    border: none;
-    box-shadow: none;
   }
 
   button {
@@ -261,12 +263,14 @@ section {
     border: none;
     border-radius: .16rem !important;
     opacity: 0.95;
+    transition: background-color 1s ease;
   }
 
   button:hover {
     background-color: $dust;
     color: $charcoal;
     opacity: 0.8;
+    transition: background-color 1s ease;
   }
 }
 
@@ -390,6 +394,49 @@ footer {
   &::after {
     height: 116%;
     width: 106%;
+  }
+
+}
+
+.contact span {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    height: 0;
+    width: 100%;
+    background-color: $orange;
+    transition: all 0.7s;
+    -webkit-animation: contactHighlight 5s infinite forwards;
+    -o-animation: contactHighlight 5s infinite forwards;
+    animation: contactHighlight 5s infinite forwards;
+
+  }
+}
+
+@keyframes contactHighlight {
+  0% {
+    height: 0;
+    width: 100%;
+  }
+  20% {
+    height: 116%;
+    width: 106%;
+  }
+  75% {
+    height: 116%;
+    width: 106%;
+  }
+  95% {
+    height: 0;
+    width: 100%;
   }
 
 }

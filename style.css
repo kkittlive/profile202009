@@ -23,7 +23,7 @@
 .white {
   color: #FFFFFF; }
 
-.spacey, .caption span, .contact span {
+.spacey, .caption span {
   letter-spacing: 0.1em; }
 
 .spacier {
@@ -46,11 +46,13 @@ p, tr {
   letter-spacing: 0.07em; }
 
 a {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  transition: color 1s ease; }
 
 a:hover {
   color: #2D4D58 !important;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 1s ease; }
 
 @media screen and (max-width: 992px) {
   section {
@@ -68,18 +70,18 @@ a:hover {
   background-color: #EA7317 !important;
   color: #FFFFFF; }
 
-.mark-charcoal, .caption span, .contact span {
+.mark-charcoal {
   background-color: #2D4D5830 !important;
   color: #FFFFFF;
   opacity: 0.8; }
 
-.under, a, .caption span, .contact span {
+.under, a, .caption span {
   border-bottom: 0.2em solid #EA7317; }
 
 .bigger {
   font-size: 1.2em; }
 
-.caption span, .contact span, .main tr:hover .me {
+.caption span, .main tr:hover .me {
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2); }
 
 .container {
@@ -89,21 +91,24 @@ section {
   min-height: 32rem;
   border-bottom: 0.1em solid #E2E4E4; }
 
-.caption span, .contact span {
+.caption span {
   font-family: "Raleway", sans-serif;
   font-style: italic;
-  font-size: 1.05em;
-  padding-left: 0.4em;
+  font-size: 1.1em;
+  padding-left: 0.2em;
   padding-right: 0.2em; }
 
 .main table {
   color: #FFFFFF !important; }
 .main tr {
-  height: 4em; }
+  height: 4em;
+  background-color: none;
+  transition: background-color 1s ease; }
 .main tr:hover {
   color: #2D4D58;
   background-color: #2D4D5830;
-  opacity: 0.8; }
+  opacity: 0.8;
+  transition: background-color 1s ease; }
 .main th {
   font-weight: 300;
   color: #E2E4E4;
@@ -119,30 +124,31 @@ section {
     font-size: 0.9rem;
     margin-bottom: 0.4em; }
 
-.contact span {
-  margin-left: -6px; }
 .contact ::placeholder {
   font-style: oblique; }
+.contact a {
+  border-bottom: none !important; }
 .contact input, .contact textarea {
   font-size: 0.9rem !important;
   border-radius: .16rem !important;
   opacity: 0.9; }
   .contact input:focus, .contact textarea:focus {
     color: #2D4D58;
-    font-style: oblique; }
-.contact input:focus, .contact textarea:focus {
-  border: none;
-  box-shadow: none; }
+    font-style: oblique;
+    border: none;
+    box-shadow: none; }
 .contact button {
   color: #E2E4E4;
   background-color: #2D4D58;
   border: none;
   border-radius: .16rem !important;
-  opacity: 0.95; }
+  opacity: 0.95;
+  transition: background-color 1s ease; }
 .contact button:hover {
   background-color: #E2E4E4;
   color: #2D4D58;
-  opacity: 0.8; }
+  opacity: 0.8;
+  transition: background-color 1s ease; }
 
 footer {
   border-top: 0.1em solid #E2E4E4; }
@@ -215,5 +221,38 @@ footer {
   .main tr:hover .me::after {
     height: 116%;
     width: 106%; }
+
+.contact span {
+  display: inline-block;
+  position: relative;
+  z-index: 0; }
+  .contact span::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    height: 0;
+    width: 100%;
+    background-color: #EA7317;
+    transition: all 0.7s;
+    -webkit-animation: contactHighlight 5s infinite forwards;
+    -o-animation: contactHighlight 5s infinite forwards;
+    animation: contactHighlight 5s infinite forwards; }
+
+@keyframes contactHighlight {
+  0% {
+    height: 0;
+    width: 100%; }
+  20% {
+    height: 116%;
+    width: 106%; }
+  75% {
+    height: 116%;
+    width: 106%; }
+  95% {
+    height: 0;
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
